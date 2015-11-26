@@ -7,11 +7,15 @@
  * @since 2015-11-26
  * @company Linus Shops
  */
-class Linus_Kickbox_Helper_DataTest extends PHPUnit_Framework_TestCase
+class LinusKickboxHelperDataTest extends PHPUnit_Framework_TestCase
 {
     public function testVerifyValidEmail()
     {
-
+        $this->assertTrue(
+            Mage::helper('linus_kickbox')->verifyIsDeliverable(
+                'samuel@dersam.net'
+            )
+        );
     }
 
     public function testVerifyInvalidEmail()

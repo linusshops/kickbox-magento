@@ -23,6 +23,8 @@
  * @method string message(...$parameters)
  * {{magicdoc_end}}
  */
+use Kickbox\Client;
+
 class Linus_Kickbox_Model_Email
 {
     private $email;
@@ -44,7 +46,7 @@ class Linus_Kickbox_Model_Email
      */
     public function verify($options = array('timeout' => 6000))
     {
-        $client = new Kickbox\Client(
+        $client = new Client(
             Mage::getStoreConfig('linus_kickbox/api/key')
         );
         $kickbox = $client->kickbox();
@@ -56,5 +58,10 @@ class Linus_Kickbox_Model_Email
     {
         $body = $this->kx_response->body;
         return $body[$name];
+    }
+
+    public function isDeliverable()
+    {
+        return $this->result() == 'deliverable';
     }
 }
