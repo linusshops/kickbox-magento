@@ -11,6 +11,11 @@
                 <class>Linus_Kickbox_Helper</class>
             </linus_kickbox>
         </helpers>
+        <models>
+            <linus_kickbox>
+                <class>Linus_Kickbox_Model</class>
+            </linus_kickbox>
+        </models>
     </global>
 
     <default>

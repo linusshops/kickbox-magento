@@ -9,5 +9,16 @@
  */
 class Linus_Kickbox_Helper_Data extends Mage_Core_Helper_Abstract
 {
-
+    /**
+     * @param $email
+     * @param array $options
+     * @return Linus_Kickbox_Model_Email
+     */
+    public function verify($email, $options = array('timeout' => 6000))
+    {
+        return Mage::getModel('linus_kickbox/email')
+            ->load($email)
+            ->verify($options)
+        ;
+    }
 }
