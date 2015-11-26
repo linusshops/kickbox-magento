@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Linus_Kickbox>
+            <version>1.0.0</version>
+        </Linus_Kickbox>
+    </modules>
+    <global>
+        <helpers>
+            <linus_kickbox>
+                <class>Linus_Kickbox_Helper</class>
+            </linus_kickbox>
+        </helpers>
+    </global>
+</config>

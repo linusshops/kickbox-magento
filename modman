@@ -1,0 +1,4 @@
+# Define symlink path maps for ModMan and magento-composer-installer.
+src/app/code/local/Linus/Kickbox app/code/local/Linus/Kickbox
+
+src/app/etc/modules/*  app/etc/modules/

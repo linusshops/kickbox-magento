@@ -30,8 +30,4 @@ nbproject/
 
 ## Node
 node_modules/
-#We're commenting this out as we do want bower components to be versioned-
-#otherwise we have to do an additional build step when deploying, which is not
-#really an option right now.
-#bower_components/
 coverage/

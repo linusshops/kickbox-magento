@@ -1,13 +1,13 @@
 {
   "name": "linusshops/kickbox-magento",
   "description": "Kickbox email verification for Magento",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "magento-module",
   "keywords": [
     "magento",
     "module",
     "linus shops",
-    "canadass motorcycle",
+    "canadas motorcycle",
     "mx canada",
     "kickbox"
   ],
@@ -35,7 +35,8 @@
     }
   ],
   "require": {
-    "magento-hackathon/magento-composer-installer": "*"
+    "magento-hackathon/magento-composer-installer": "*",
+    ""
   },
   "extra":{
   }
