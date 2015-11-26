@@ -36,7 +36,7 @@
   ],
   "require": {
     "magento-hackathon/magento-composer-installer": "*",
-    "kickboxio/kickbox-php": "^2.0.0"
+    "kickbox/kickbox": "^2.0.0"
   },
   "extra":{
   }
