@@ -12,4 +12,34 @@
             </linus_kickbox>
         </helpers>
     </global>
+
+    <default>
+        <linus_kickbox>
+            <api>
+                <key></key>
+            </api>
+        </linus_kickbox>
+    </default>
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <linus_kickbox>
+                                            <title>LinusKickbox - All</title>
+                                        </linus_kickbox>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
 </config>
