@@ -1,5 +1,5 @@
 <?php
-
+use Kickbox\Client;
 /**
  * Provides a Magento-friendly wrapper for the Kickbox API.
  * The magic methods all represent the fields available from a response from
@@ -25,7 +25,6 @@
  * @method string message(...$parameters)
  * {{magicdoc_end}}
  */
-use Kickbox\Client;
 
 class Linus_Kickbox_Model_Email
 {
