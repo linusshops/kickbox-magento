@@ -12,7 +12,7 @@ class Linus_Kickbox_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * Verify an email against Kickbox.io. Returns the response model. Use this
      * if you require access to the fields returned by Kickbox.
-     * 
+     *
      * @param string $email
      * @param array $options
      * @return Linus_Kickbox_Model_Email

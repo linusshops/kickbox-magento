@@ -5,9 +5,9 @@ This module is a wrapper for the [Kickbox.io php api library](https://github.com
 
 ## Installation
 This should be installed using Composer. A magento build should also include the 
-Magento Composer Installer. This module follows the module structure guidelines 
+[Magento Composer Installer](https://github.com/Cotya/magento-composer-installer). This module follows the module structure guidelines 
 provided by Firegento, which will also make it very easy to submit to the 
-Firegento Composer Repository.
+[Firegento Composer Repository](http://packages.firegento.com/).
 
 *As this depends on a non-Magento composer module, version 3+ of Magento Composer
 Installer is required.*
