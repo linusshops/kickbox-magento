@@ -31,6 +31,11 @@ $didYouMean = $verifiedEmail->did_you_mean();
 $sendex = $verifiedEmail->sendex();
 ```
 
+# Tests
+Included tests can be run with [prophet](https://github.com/linusshops/prophet).
+
+`prophet scry:phpunit -m kickbox-magento`
+
 # Author
 Samuel Schmidt
 
