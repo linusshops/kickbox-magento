@@ -1,7 +1,9 @@
 <?php
 
 /**
- *
+ * Provides a Magento-friendly wrapper for the Kickbox API.
+ * The magic methods all represent the fields available from a response from
+ * Kickbox.
  *
  * @author Sam Schmidt <samuel@dersam.net>
  * @since 2015-11-26
@@ -41,6 +43,7 @@ class Linus_Kickbox_Model_Email
     }
 
     /**
+     * Query kickbox on the validity of the email contained in this object.
      * @param array $options
      * @return $this
      */
@@ -54,12 +57,23 @@ class Linus_Kickbox_Model_Email
         return $this;
     }
 
+    /**
+     * Look up the given method name in the Kickbox response fields
+     * @param $name
+     * @param $arguments
+     * @return mixed
+     */
     public function __call($name, $arguments)
     {
         $body = $this->kx_response->body;
         return $body[$name];
     }
 
+    /**
+     * Is the email deliverable?
+     * 'deliverable' and 'risky' both return true.
+     * @return bool
+     */
     public function isDeliverable()
     {
         return in_array(
