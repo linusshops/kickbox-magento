@@ -2,7 +2,7 @@
 
 <phpunit colors="true">
     <testsuites>
-        <testsuite name="Linus Garage Test Suite">
+        <testsuite name="Linus Kickbox Test Suite">
             <directory suffix="Test.php">./tests/</directory>
         </testsuite>
     </testsuites>
