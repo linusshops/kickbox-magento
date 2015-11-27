@@ -44,6 +44,7 @@ class Linus_Kickbox_Model_Email
 
     /**
      * Query kickbox on the validity of the email contained in this object.
+     *
      * @param array $options
      * @return $this
      */
@@ -59,6 +60,7 @@ class Linus_Kickbox_Model_Email
 
     /**
      * Look up the given method name in the Kickbox response fields
+     *
      * @param $name
      * @param $arguments
      * @return mixed
@@ -71,6 +73,7 @@ class Linus_Kickbox_Model_Email
 
     /**
      * Is the email deliverable?
+     *
      * 'deliverable' and 'risky' both return true.
      * @return bool
      */

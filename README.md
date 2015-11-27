@@ -38,7 +38,7 @@ Included tests can be run with [prophet](https://github.com/linusshops/prophet).
 `prophet scry:phpunit -m kickbox-magento`
 
 # Author
-Samuel Schmidt
+[Samuel Schmidt](https://github.com/dersam)
 
 # License
 MIT
