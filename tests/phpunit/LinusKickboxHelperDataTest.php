@@ -20,6 +20,10 @@ class LinusKickboxHelperDataTest extends PHPUnit_Framework_TestCase
 
     public function testVerifyInvalidEmail()
     {
-
+        $this->assertFalse(
+            Mage::helper('linus_kickbox')->verifyIsDeliverable(
+                'test@example.com'
+            )
+        );
     }
 }
