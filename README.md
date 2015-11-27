@@ -25,6 +25,7 @@ Mage::helper('linus_kickbox')->verifyIsDeliverable('info@linusshops.com');
 /** @var $verifiedEmail Linus_Kickbox_Model_Email */
 $verifiedEmail = Mage::helper('linus_kickbox')->verify('info@linusshops.com');
 $isValid = $verifiedEmail->isDeliverable();
+
 //You can also access any of the response fields from Kickbox as magic methods.
 $result = $verifiedEmail->result();
 $didYouMean = $verifiedEmail->did_you_mean();
