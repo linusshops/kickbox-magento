@@ -13,7 +13,7 @@ class LinusKickboxHelperDataTest extends PHPUnit_Framework_TestCase
     {
         $this->assertTrue(
             Mage::helper('linus_kickbox')->verifyIsDeliverable(
-                'samuel@dersam.net'
+                'info@linusshops.com'
             )
         );
     }

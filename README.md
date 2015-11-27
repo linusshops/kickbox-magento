@@ -17,13 +17,13 @@ Installer is required.*
 ### Verify an email
 ```
 //'risky' emails are also considered deliverable
-Mage::helper('linus_kickbox')->verifyIsDeliverable('samuel@dersam.net');
+Mage::helper('linus_kickbox')->verifyIsDeliverable('info@linusshops.com');
 ```
 
 ### Verify an email using the response model
 ```
 /** @var $verifiedEmail Linus_Kickbox_Model_Email */
-$verifiedEmail = Mage::helper('linus_kickbox')->verify('samuel@dersam.net');
+$verifiedEmail = Mage::helper('linus_kickbox')->verify('info@linusshops.com');
 $isValid = $verifiedEmail->isDeliverable();
 //You can also access any of the response fields from Kickbox as magic methods.
 $result = $verifiedEmail->result();
