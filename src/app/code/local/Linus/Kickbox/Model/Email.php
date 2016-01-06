@@ -53,7 +53,13 @@ class Linus_Kickbox_Model_Email
             Mage::getStoreConfig('linus_kickbox/api/key')
         );
         $kickbox = $client->kickbox();
-        $this->kx_response = $kickbox->verify($this->email, $options);
+
+        try {
+            $this->kx_response = $kickbox->verify($this->email, $options);
+        } catch (Kickbox\Exception\ClientException $ex) {
+            Mage::logException($ex);
+        }
+
         return $this;
     }
 
@@ -66,24 +72,25 @@ class Linus_Kickbox_Model_Email
      */
     public function __call($name, $arguments)
     {
-        $body = $this->kx_response->body;
-        return $body[$name];
+        return (!empty($this->kx_response->body[$name]))
+            ? $this->kx_response->body[$name]
+            : null;
     }
 
     /**
      * Is the email deliverable?
      *
-     * 'deliverable' and 'risky' both return true.
-     * @return bool
+     * `deliverable` and `risky` both return `true`. If there is an
+     * `Insufficient balance` or any other exception thrown in the `verify`
+     * method, this returns `null`.
+     *
+     * @return bool|null
      */
     public function isDeliverable()
     {
-        return in_array(
-            $this->result(),
-            array(
-                'deliverable',
-                'risky'
-            )
-        );
+        return (is_string($this->result()))
+            ? in_array($this->result(), array('deliverable', 'risky'))
+            : null;
+
     }
 }

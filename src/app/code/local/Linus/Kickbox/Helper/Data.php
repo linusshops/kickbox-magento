@@ -37,6 +37,10 @@ class Linus_Kickbox_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function verifyIsDeliverable($email, $options = array('timeout'=>6000))
     {
-        return $this->verify($email, $options)->isDeliverable();
+        $kickboxEmailModel = $this->verify($email, $options);
+
+        return ($kickboxEmailModel instanceof Linus_Kickbox_Model_Email)
+            ? $kickboxEmailModel->isDeliverable()
+            : null;
     }
 }
