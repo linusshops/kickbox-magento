@@ -89,7 +89,7 @@ class Linus_Kickbox_Model_Email
     public function isDeliverable()
     {
         return (is_string($this->result()))
-            ? in_array($this->result(), array('deliverable', 'risky'))
+            ? in_array($this->result(), array('deliverable', 'risky', 'unknown'))
             : null;
 
     }
